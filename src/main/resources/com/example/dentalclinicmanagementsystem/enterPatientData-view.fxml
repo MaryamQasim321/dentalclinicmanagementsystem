@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.dentalclinicmanagementsystem.EnterPatientDataView"
+            prefHeight="400.0" prefWidth="600.0"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
+
+
+        <children>
+            <Button  prefWidth="200"  id="main_sale" mnemonicParsing="false" onAction="#onClickBackButton" style="-fx-font-size: 20px; -fx-background-color: #7393B3;" text="back">
+
+                <graphic>
+                    <ImageView fitHeight="25" fitWidth="25">
+                        <image>
+                            <Image url="@./assets/bacck3.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </children>
+
+
+
+</AnchorPane>

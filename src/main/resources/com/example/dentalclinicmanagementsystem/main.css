@@ -1,0 +1,74 @@
+/* style.css */
+* {
+    background-color: #7393B3;
+}
+
+/* Style for the TextArea */
+.text-area {
+    -fx-background-color: #f4f4f4;
+    -fx-font-family: "Book Antiqua", sans-serif;
+    -fx-font-size: 22px;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-border-color: #b0b0b0;
+    -fx-padding: 10px;
+}
+
+/* Style for the Buttons */
+.button {
+    -fx-background-color: #303841;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 4px;
+    -fx-padding: 10px;
+    -fx-min-width: 100px;
+    -fx-min-height: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.0, 2, 2);
+}
+
+/* Style for the Home Button */
+#home-button {
+    -fx-background-color: #303841;
+}
+
+/* Style for the Login Button */
+#login-button {
+    -fx-background-color: #303841;
+}
+
+/* Style for Contact Us and About Us Buttons */
+.button:hover {
+    -fx-background-color: #303841;
+}
+
+/* Styling for the AnchorPane */
+.anchorpane {
+    -fx-background-color: #303841;
+    -fx-padding: 20px;
+    -fx-border-color: #d0d0d0;
+    -fx-border-style: solid;
+}
+
+/* Styling for the BorderPane */
+.borderpane {
+    -fx-background-color: #303841;
+}
+
+/* Styling for Main Label */
+.main-label {
+    -fx-font-size: 30px;
+}
+
+/* Styling for Doctor Button */
+.doctor-button {
+    -fx-max-width: 200px;
+    -fx-min-width: 200px;
+    -fx-pref-width: 200px;
+    -fx-background-color: #7393B3;
+}
+
+/* Global Button Styling */
+button {
+    -fx-background-color: #303841;
+}

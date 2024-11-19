@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #002D62;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.Login">
+   <Button id="main_sale" mnemonicParsing="false" onAction="#onClickBackButton" style="-fx-font-size: 20px;" text="back">
+
+      <graphic>
+         <ImageView fitHeight="25" fitWidth="25">
+            <image>
+               <Image url="@./assets/bacck3.png" />
+            </image>
+         </ImageView>
+      </graphic>
+   </Button>
+   <Button onAction="#onClickadminLoginButton" layoutX="460.0" layoutY="101.0" mnemonicParsing="false" text="Login as an admin" />
+   <children>
+   <Label layoutX="54.0" layoutY="140.0" prefHeight="206.0" prefWidth="515.0" style="-fx-font-size: 24px;" styleClass="main-label" text="welcome to salam medical complex" textFill="white" />
+
+<Button layoutX="94.0" layoutY="100.0" mnemonicParsing="false" onAction="#onClickDoctorLoginButton" text="Login as a doctor" />
+      <Button layoutX="274.0" layoutY="100.0" mnemonicParsing="false" onAction="#onClickPatientLoginButton" text="Log in as a patient" />
+   </children>
+</AnchorPane>

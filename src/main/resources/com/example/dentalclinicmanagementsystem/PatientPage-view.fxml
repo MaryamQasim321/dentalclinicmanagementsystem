@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.PatientPage"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
+   <Button  style="-fx-font-size: 20px;" onAction="#onClickBackButton" id="main_sale" mnemonicParsing="false"  text="back">
+
+      <graphic>
+         <ImageView fitHeight="25" fitWidth="25">
+            <image>
+               <Image url="@./assets/bacck3.png" />
+            </image>
+         </ImageView>
+      </graphic>
+   </Button>
+   <children>
+      <Button onAction="#onClickBookAppointmentButton" layoutX="45.0" layoutY="70.0" mnemonicParsing="false" text="Book appointment" />
+      <Button onAction="#onClickViewAboutDoctorButton" layoutX="222.0" layoutY="165.0" mnemonicParsing="false" text="About doctor" />
+      <Button onAction="#onClickCalculateBillButton" layoutX="328.0" layoutY="158.0" mnemonicParsing="false" text="Calculate bill" />
+      <Button onAction="#onClickViewDiscountsButton" layoutX="354.0" layoutY="70.0" mnemonicParsing="false" text="View discounts" />
+      <Button onAction="#onClickViewTreatmentsButton" layoutX="77.0" layoutY="171.0" mnemonicParsing="false" text="Dental treatments" />
+   </children>
+</AnchorPane>

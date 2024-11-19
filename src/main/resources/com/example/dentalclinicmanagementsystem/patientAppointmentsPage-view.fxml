@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.dentalclinicmanagementsystem.PatientAppointmentsPageView"
+            prefHeight="400.0" prefWidth="600.0"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
+    <Button onAction="#onClickBackButton" id="main_sale" mnemonicParsing="false"  text="back">
+        <TextArea layoutX="53.0" layoutY="193.0" prefHeight="200.0" prefWidth="481.0" text="Salam medical complex&#10;Give us a chance to prove that we care">
+
+        <graphic>
+            <ImageView fitHeight="70" fitWidth="70">
+                <image>
+                    <Image url="@./assets/10903912261530177261-128.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+
+</AnchorPane>

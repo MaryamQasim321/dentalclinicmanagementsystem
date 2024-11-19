@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.ContactUs"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
+   <Button  style="-fx-font-size: 20px;" onAction="#onClickBackButton" id="main_sale" mnemonicParsing="false"  text="back">
+
+      <graphic>
+         <ImageView fitHeight="25" fitWidth="25">
+            <image>
+               <Image url="@./assets/bacck3.png" />
+            </image>
+         </ImageView>
+      </graphic>
+   </Button>
+   <children>
+      <TextArea layoutX="96.0" layoutY="29.0" prefHeight="336.0" prefWidth="391.0" text="Contact us" />
+   </children>
+</AnchorPane>
