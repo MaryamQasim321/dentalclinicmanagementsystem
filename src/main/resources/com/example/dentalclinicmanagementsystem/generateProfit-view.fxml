@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.dentalclinicmanagementsystem.GenerateProfitView"
-            prefHeight="400.0" prefWidth="600.0"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
-    <AnchorPane prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: #7393B3;">
-        <children>
-            <Button  prefWidth="200"  id="main_sale" mnemonicParsing="false" onAction="#onClickBackButton" style="-fx-font-size: 20px; -fx-background-color: #7393B3;" text="back">
+            fx:controller="com.example.dentalclinicmanagementsystem.GenerateProfitReportsView"
+            prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #7393B3;">
 
+    <AnchorPane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #7393B3;">
+        <children>
+            <!-- Back Button -->
+            <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
                 <graphic>
-                    <ImageView fitHeight="25" fitWidth="25">
+                    <ImageView fitHeight="20" fitWidth="20">
                         <image>
                             <Image url="@./assets/bacck3.png" />
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-        </children></AnchorPane>
+        </children>
+    </AnchorPane>
 
+    <VBox layoutX="230.0" layoutY="20.0" spacing="20" alignment="TOP_CENTER" prefWidth="540.0">
+        <Label text="Generate Profit Report" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" />
 
+        <HBox spacing="30" alignment="CENTER">
+            <VBox spacing="5">
+                <Label text="Start Date" style="-fx-font-size: 14px; -fx-text-fill: #D1E7FF;" />
+                <DatePicker fx:id="startDatePicker" prefWidth="150.0" style="-fx-border-color: #4CAF50; -fx-border-radius: 5;" />
+            </VBox>
+            <VBox spacing="5">
+                <Label text="End Date" style="-fx-font-size: 14px; -fx-text-fill: #D1E7FF;" />
+                <DatePicker fx:id="endDatePicker" prefWidth="150.0" style="-fx-border-color: #4CAF50; -fx-border-radius: 5;" />
+            </VBox>
+        </HBox>
 
+        <Button text="Generate Report" onAction="#onCalculateProfitClick"
+                style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 8 16;" />
+
+        <TableView fx:id="profitReportTable" prefWidth="540.0" prefHeight="300.0" style="-fx-border-color: #D1E7FF; -fx-border-width: 2; -fx-border-radius: 8;">
+            <columns>
+                <TableColumn fx:id="profitDateColumn" text="Profit Date" prefWidth="150.0" />
+                <TableColumn fx:id="totalRevenueColumn" text="Total Revenue" prefWidth="130.0" />
+                <TableColumn fx:id="totalExpenseColumn" text="Total Expense" prefWidth="130.0" />
+                <TableColumn fx:id="profitAmountColumn" text="Profit Amount" prefWidth="130.0" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="totalProfitLabel" text="Total Profit: $" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #30527a" />
+    </VBox>
 </AnchorPane>

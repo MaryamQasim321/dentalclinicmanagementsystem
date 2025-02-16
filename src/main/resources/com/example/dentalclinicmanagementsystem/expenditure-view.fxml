@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #7393B3;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.ExpenditureView">
+   <content>
+      <!-- Use AnchorPane or VBox to wrap all elements -->
+      <AnchorPane prefWidth="1400.0" style="-fx-background-color: #7393B3;">
+         <!-- Back Button -->
+         <Button fx:id="main_sale" layoutX="20" layoutY="10" mnemonicParsing="false" onAction="#onClickBackButton" style="-fx-font-size: 18px; -fx-background-color: #30527a; -fx-text-fill: white;                            -fx-border-radius: 10; -fx-background-radius: 10;" text="Back">
+            <graphic>
+               <ImageView fitHeight="20" fitWidth="20">
+                  <image>
+                     <Image url="@./assets/bacck3.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+
+         <!-- Expenses Table -->
+         <Label layoutX="100" layoutY="50" style="-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;" text="Expenses" />
+         <TableView fx:id="expensesTable" layoutX="100.0" layoutY="80.0" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: #7393B3; -fx-border-color: #30527a; -fx-border-width: 1;">
+            <columns>
+               <TableColumn fx:id="expenseIdColumn" prefWidth="150.0" style="-fx-background-color:  #30527a; -fx-text-fill: white;" text="Expense ID" />
+               <TableColumn fx:id="expenseNameColumn" prefWidth="300.0" style="-fx-background-color:  #30527a; -fx-text-fill: white;" text="Expense Name" />
+               <TableColumn fx:id="expenseAmountColumn" prefWidth="150.0" style="-fx-background-color:  #30527a; -fx-text-fill: white;" text="Amount ($)" />
+               <TableColumn fx:id="expenseDateColumn" prefWidth="200.0" style="-fx-background-color:  #30527a; -fx-text-fill: white;" text="Date" />
+            </columns>
+         </TableView>
+
+         <!-- Add Expense Section -->
+         <Label layoutX="100" layoutY="390" style="-fx-font-size: 18px; -fx-text-fill: white; -fx-font-weight: bold;" text="Add New Expense" />
+         <HBox layoutX="20.0" layoutY="420.0" spacing="15" />
+
+         <!-- Revenue Table -->
+         <Label layoutX="100" layoutY="610" style="-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;" text="Revenue" />
+         <TableView fx:id="revenueTable" layoutX="100.0" layoutY="650.0" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: #7393B3; -fx-border-color: #30527a; -fx-border-width: 1;">
+            <columns>
+               <TableColumn fx:id="appointmentIdColumn" prefWidth="150.0" style="-fx-background-color:  #30527a; -fx-text-fill: white;" text="Appointment ID" />
+               <TableColumn fx:id="patientNameColumn" prefWidth="250.0" style="-fx-background-color:  #30527a;-fx-text-fill: white;" text="Patient Name" />
+               <TableColumn fx:id="serviceDetailsColumn" prefWidth="250.0" style="-fx-background-color:  #30527a; -fx-text-fill: white;" text="Service Name" />
+               <TableColumn fx:id="revenueGeneratedColumn" prefWidth="150.0" style="-fx-background-color:  #30527a; -fx-text-fill: white;" text="Revenue ($)" />
+               <TableColumn fx:id="appointmentDateColumn" prefWidth="150.0" style="-fx-background-color:  #30527a; -fx-text-fill: white;" text="Appointment Date" />
+            </columns>
+         </TableView>
+
+         <!-- Generate Revenue Report Section -->
+         <Label layoutX="100" layoutY="490" style="-fx-font-size: 18px; -fx-text-fill: white; -fx-font-weight: bold;" text="Generate Revenue Report" />
+         <HBox layoutX="300.0" layoutY="490.0" spacing="15" />
+         <Button fx:id="addExpenseButton" layoutX="772.0" layoutY="417.0" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;                               -fx-border-radius: 10; -fx-background-radius: 10;" text="Add Expense" />
+         <DatePicker fx:id="expenseDatePicker" layoutX="547.0" layoutY="418.0" prefWidth="200.0" promptText="Date" style="-fx-font-size: 14px;" />
+         <TextField fx:id="expenseAmountField" layoutX="373.0" layoutY="420.0" prefWidth="150.0" promptText="Amount" style="-fx-font-size: 14px; -fx-background-color: #e0e0e0;" />
+         <TextField fx:id="expenseNameField" layoutX="105.0" layoutY="420.0" prefWidth="250.0" promptText="Expense Name" style="-fx-font-size: 14px; -fx-background-color: #e0e0e0;" />
+         <DatePicker fx:id="startDatePicker" layoutX="100.0" layoutY="554.0" prefWidth="200.0" promptText="Start Date" style="-fx-font-size: 14px;" />
+         <DatePicker fx:id="endDatePicker" layoutX="323.0" layoutY="554.0" prefWidth="200.0" promptText="End Date" style="-fx-font-size: 14px;" />
+         <Button fx:id="generateRevenueButton" layoutX="547.0" layoutY="551.0" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;                               -fx-border-radius: 10; -fx-background-radius: 10;" text="Generate Report" />
+      </AnchorPane>
+   </content>
+</ScrollPane>

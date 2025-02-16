@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.dentalclinicmanagementsystem.ViewAppointmentsView"
-            prefHeight="400.0" prefWidth="600.0"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
-    <AnchorPane prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: #7393B3;">
-        <children>
-            <Button  prefWidth="200"  id="main_sale" mnemonicParsing="false" onAction="#onClickBackButton" style="-fx-font-size: 20px; -fx-background-color: #7393B3;" text="back">
-
-                <graphic>
-                    <ImageView fitHeight="25" fitWidth="25">
-                        <image>
-                            <Image url="@./assets/bacck3.png" />
-                        </image>
-                    </ImageView>
-                </graphic>
-            </Button>
-        </children></AnchorPane>
-
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #7393B3;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.ViewAppointmentsView">
     <children>
-        <Button prefWidth="200" layoutX="0" layoutY="45.0" mnemonicParsing="false" onAction="#onClickViewAppointmentsButton" text="Patient's appointments" style="-fx-background-color: #7393B3; -fx-text-fill: white; -fx-alignment: CENTER_LEFT;" />
-        <Button prefWidth="200" layoutX="0" layoutY="86" mnemonicParsing="false" onAction="#onClickEnterPatientDataButton" text="Enter patient's data" style="-fx-background-color: #7393B3; -fx-text-fill: white; -fx-alignment: CENTER_LEFT;" />
-        <Button prefWidth="200" layoutX="0" layoutY="127.0" mnemonicParsing="false" onAction="#onClickPatientHistoryButton" text="View patient's history" style="-fx-background-color: #7393B3; -fx-text-fill: white; -fx-alignment: CENTER_LEFT;" />
-        <Button prefWidth="200" layoutX="0" layoutY="168.0" mnemonicParsing="false" onAction="#onClickGenerateReportsButton" text="Generate profit reports" style="-fx-background-color: #7393B3; -fx-text-fill: white; -fx-alignment: CENTER_LEFT;" />
-        <Button prefWidth="200" layoutX="0" layoutY="209.0" mnemonicParsing="false" onAction="#onClickViewPricingButton" text="View pricing" style="-fx-background-color: #7393B3; -fx-text-fill: white; -fx-alignment: CENTER_LEFT;" />
-        <Button prefWidth="200" layoutX="0" layoutY="250.0" mnemonicParsing="false" onAction="#onClickViewTreatmentsButton" text="View treatments" style="-fx-background-color: #7393B3; -fx-text-fill: white; -fx-alignment: CENTER_LEFT;" />
+        <!-- Back Button -->
+        <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
+            <graphic>
+                <ImageView fitHeight="20" fitWidth="20">
+                    <image>
+                        <Image url="@./assets/bacck3.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
 
+        <!-- Filter Section -->
+        <HBox layoutX="20.0" layoutY="70.0" spacing="10">
+            <Label text="Filter by Status:" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" />
+            <ComboBox fx:id="statusComboBox" prefWidth="150.0" />
+            <Button text="Filter Appointments" onAction="#onFilterAppointmentsClick" style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 10;" />
+        </HBox>
+
+        <!-- TableView for Appointments -->
+        <TableView fx:id="appointmentsTable" layoutX="20.0" layoutY="120.0" prefHeight="450.0" prefWidth="960.0" style="-fx-background-color: white; -fx-border-color: #30527a; -fx-border-width: 2px; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <columns>
+                <TableColumn fx:id="appointmentIdColumn" prefWidth="100.0" text="ID" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="patientIdColumn" prefWidth="150.0" text="Patient ID" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="patientNameColumn" prefWidth="200.0" text="Patient Name" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="patientContactColumn" prefWidth="200.0" text="Contact Number" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="doctorIdColumn" prefWidth="120.0" text="Doctor ID" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="treatmentsColumn" prefWidth="250.0" text="Treatments" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="appointmentDateColumn" prefWidth="150.0" text="Date" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="statusColumn" prefWidth="150.0" text="Status" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="notesColumn" prefWidth="250.0" text="Notes" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="totalCostColumn" prefWidth="200.0" text="Total Cost" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="editColumn" prefWidth="150.0" text="Actions" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #30527a; -fx-text-fill: white;" />
+            </columns>
+        </TableView>
     </children>
 </AnchorPane>

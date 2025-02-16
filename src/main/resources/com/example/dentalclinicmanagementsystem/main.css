@@ -16,7 +16,7 @@
 
 /* Style for the Buttons */
 .button {
-    -fx-background-color: #303841;
+    -fx-background-color: #30527a;
     -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
@@ -29,12 +29,12 @@
 
 /* Style for the Home Button */
 #home-button {
-    -fx-background-color: #303841;
+    -fx-background-color: #30527a;
 }
 
 /* Style for the Login Button */
 #login-button {
-    -fx-background-color: #303841;
+    -fx-background-color: #30527a;
 }
 
 /* Style for Contact Us and About Us Buttons */
@@ -52,7 +52,7 @@
 
 /* Styling for the BorderPane */
 .borderpane {
-    -fx-background-color: #303841;
+    -fx-background-color: #30527a;
 }
 
 /* Styling for Main Label */
@@ -65,10 +65,12 @@
     -fx-max-width: 200px;
     -fx-min-width: 200px;
     -fx-pref-width: 200px;
-    -fx-background-color: #7393B3;
+    -fx-background-color: #30527a;
 }
 
 /* Global Button Styling */
 button {
-    -fx-background-color: #303841;
+    -fx-background-color: #30527a;
 }
+
+

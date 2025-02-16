@@ -1,26 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.dentalclinicmanagementsystem.BookAppointmentView"
-            prefHeight="400.0" prefWidth="600.0"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
-    <Button  style="-fx-font-size: 20px;" onAction="#onClickBackButton" id="main_sale" mnemonicParsing="false"  text="back">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #7393B3;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.BookAppointmentView">
+    <children>
+        <!-- Back Button -->
+        <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
+            <graphic>
+                <ImageView fitHeight="20" fitWidth="20">
+                    <image>
+                        <Image url="@./assets/bacck3.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <!-- Title Label -->
+        <Label fx:id="titleLabel" layoutX="400.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" text="Book Appointment" />
 
-        <graphic>
-            <ImageView fitHeight="25" fitWidth="25">
-                <image>
-                    <Image url="@./assets/bacck3.png" />
-                </image>
-            </ImageView>
-        </graphic>
-    </Button>
+        <!-- Select Treatment -->
+        <Label fx:id="selectTreatmentLabel" layoutX="50.0" layoutY="80.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Select Treatment:" />
+        <ComboBox fx:id="treatmentComboBox" layoutX="200.0" layoutY="75.0" prefWidth="250.0" style="-fx-font-size: 14px;" />
 
+        <!-- Selected Treatments -->
+        <Label fx:id="selectedTreatmentLabel" layoutX="50.0" layoutY="150.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Selected Treatments:" />
+        <ListView fx:id="selectedTreatmentsListView" layoutX="200.0" layoutY="145.0" prefHeight="200.0" prefWidth="250.0" style="-fx-border-color: #30527a; -fx-border-radius: 10; -fx-background-color: white;" />
+
+        <!-- Add/Remove Treatment Buttons -->
+        <Button fx:id="addTreatmentButton" layoutX="500.0" layoutY="75.0" mnemonicParsing="false" onAction="#onAddTreatment" text="Add Treatment" style="-fx-font-size: 14px; -fx-background-color: #30527a; -fx-text-fill: white;" />
+        <Button fx:id="removeTreatmentButton" layoutX="500.0" layoutY="145.0" mnemonicParsing="false" onAction="#onRemoveTreatment" text="Remove Treatment" style="-fx-font-size: 14px; -fx-background-color: #30527a; -fx-text-fill: white;" />
+
+        <!-- Appointment Date -->
+        <Label fx:id="appointmentDateLabel" layoutX="50.0" layoutY="380.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Appointment Date:" />
+        <DatePicker fx:id="appointmentDatePicker" layoutX="200.0" layoutY="375.0" prefWidth="250.0" style="-fx-font-size: 14px;" />
+
+        <!-- Patient Name -->
+        <Label fx:id="patientNameLabel" layoutX="50.0" layoutY="450.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Patient Name:" />
+        <TextField fx:id="patientNameField" layoutX="200.0" layoutY="445.0" prefWidth="250.0" style="-fx-font-size: 14px;" />
+
+        <!-- Doctor Name -->
+        <Label fx:id="doctorNameLabel" layoutX="50.0" layoutY="520.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Doctor Name:" />
+        <TextField fx:id="doctorNameField" layoutX="200.0" layoutY="515.0" prefWidth="250.0" style="-fx-font-size: 14px;" />
+
+        <!-- Status -->
+        <Label fx:id="statusLabel" layoutX="500.0" layoutY="380.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Status:" />
+        <ChoiceBox fx:id="statusChoiceBox" layoutX="600.0" layoutY="375.0" prefWidth="250.0" style="-fx-font-size: 14px;" />
+
+        <!-- Notes -->
+        <Label fx:id="notesLabel" layoutX="500.0" layoutY="450.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Notes:" />
+        <TextArea fx:id="notesTextArea" layoutX="600.0" layoutY="445.0" prefHeight="150.0" prefWidth="250.0" style="-fx-font-size: 14px; -fx-border-color: #30527a; -fx-border-radius: 10; -fx-background-color: white;" />
+
+        <!-- Submit Button -->
+        <Button fx:id="submitAppointmentButton" layoutX="450.0" layoutY="600.0" mnemonicParsing="false" onAction="#onSubmitAppointment" text="Submit Appointment" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white; -fx-border-radius: 10; -fx-background-radius: 10;" />
+    </children>
 </AnchorPane>

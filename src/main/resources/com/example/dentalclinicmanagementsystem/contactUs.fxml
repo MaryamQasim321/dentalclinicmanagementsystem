@@ -5,7 +5,7 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.ContactUs"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.ContactUs"  stylesheets="@main.css" style="-fx-background-color: #7393B3;">
    <Button  style="-fx-font-size: 20px;" onAction="#onClickBackButton" id="main_sale" mnemonicParsing="false"  text="back">
 
       <graphic>
@@ -17,6 +17,26 @@
       </graphic>
    </Button>
    <children>
-      <TextArea layoutX="96.0" layoutY="29.0" prefHeight="336.0" prefWidth="391.0" text="Contact us" />
+      <Label text=" Address:📍320 Lahore – Kasur Rd, Tipu Block Garden Town, Lahore, Punjab 54000"
+             layoutX="300.0" layoutY="200.0"
+             style="-fx-font-size: 25px; -fx-font-weight: bold;  -fx-fill: white; -fx-font-style: italic;"
+             wrapText="true" textAlignment="CENTER" maxWidth="500"/>
+      <Label text=" - Phone: 0318-2220655 0348-4192443"
+             layoutX="300.0" layoutY="260.0"
+             style="-fx-font-size: 25px; -fx-font-weight: bold;  -fx-fill: white; -fx-font-style: italic;"
+             wrapText="true" textAlignment="CENTER" maxWidth="500"/>
+      <Label text="  - Email: dentalcarepremium@gmail.com"
+             layoutX="300.0" layoutY="320.0"
+             style="-fx-font-size: 25px; -fx-font-weight: bold;  -fx-fill: white; -fx-font-style: italic;"
+             wrapText="true" textAlignment="CENTER" maxWidth="500"/>
+      <Label text=" - Timing: 04:00pm to 10:00pm"
+             layoutX="300.0" layoutY="380.0"
+             style="-fx-font-size: 25px; -fx-font-weight: bold;  -fx-fill: white; -fx-font-style: italic;"
+             wrapText="true" textAlignment="CENTER" maxWidth="500"/>
+
+
+
+
+
    </children>
 </AnchorPane>

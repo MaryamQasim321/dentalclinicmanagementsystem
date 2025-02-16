@@ -4,7 +4,8 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #002D62;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.Login">
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7393B3;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.Login">
    <Button id="main_sale" mnemonicParsing="false" onAction="#onClickBackButton" style="-fx-font-size: 20px;" text="back">
 
       <graphic>
@@ -15,11 +16,24 @@
          </ImageView>
       </graphic>
    </Button>
-   <Button onAction="#onClickadminLoginButton" layoutX="460.0" layoutY="101.0" mnemonicParsing="false" text="Login as an admin" />
+   <Button layoutX="384.0" layoutY="101.0" mnemonicParsing="false" onAction="#onClickadminLoginButton" prefHeight="71.0" prefWidth="216.0" style="-fx-font-size: 20px;" text="Login as an admin" />
    <children>
-   <Label layoutX="54.0" layoutY="140.0" prefHeight="206.0" prefWidth="515.0" style="-fx-font-size: 24px;" styleClass="main-label" text="welcome to salam medical complex" textFill="white" />
 
-<Button layoutX="94.0" layoutY="100.0" mnemonicParsing="false" onAction="#onClickDoctorLoginButton" text="Login as a doctor" />
-      <Button layoutX="274.0" layoutY="100.0" mnemonicParsing="false" onAction="#onClickPatientLoginButton" text="Log in as a patient" />
+<Button style="-fx-font-size: 20px;" layoutX="94.0" layoutY="100.0" mnemonicParsing="false" onAction="#onClickDoctorLoginButton" prefHeight="70.0" prefWidth="230.0" text="Login as a doctor" />
+      <Text text="Premium Dental Care"
+
+            layoutX="140.0" layoutY="270"
+            style=" -fx-font-size: 50px; -fx-font-weight: bold; -fx-fill: white; -fx-font-family: 'Garamond';" />
+
+      <Text text="Smile with Confidence, Live with Joy"
+            layoutX="140.0" layoutY="340"
+            style=" -fx-font-size: 50px; -fx-font-weight: bold; -fx-fill: white; -fx-font-family: 'Garamond';" />
+
+
+      <Label text=" 📍320 Lahore – Kasur Rd, Tipu Block Garden Town, Lahore, Punjab 54000"
+             layoutX="300.0" layoutY="400.0"
+             style="-fx-font-size: 16px; -fx-fill: white; -fx-font-style: italic;"
+             wrapText="true" textAlignment="CENTER" maxWidth="500"/>
+
    </children>
 </AnchorPane>

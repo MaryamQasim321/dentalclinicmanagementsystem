@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.EditTreatmentsView">
+    <!-- Back Button -->
+    <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
+        <graphic>
+            <ImageView fitHeight="20" fitWidth="20">
+                <image>
+                    <Image url="@./assets/bacck3.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <children>
+      <Button layoutX="195.0" layoutY="115.0" mnemonicParsing="false" text="Enter treatments" />
+      <Button layoutX="195.0" layoutY="200.0" mnemonicParsing="false" text="Remove treatments" />
+      <Button layoutX="229.0" layoutY="262.0" mnemonicParsing="false" text="Edit treatments" />
+   </children>
+
+</AnchorPane>

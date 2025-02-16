@@ -1,11 +1,9 @@
 package com.example.dentalclinicmanagementsystem;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-
 
 import java.io.IOException;
 
@@ -41,17 +39,11 @@ public class MainApplication extends Application {
 
         GenerateAppointmentReportView.setMainStage(stage);
 
-        GenerateProfitView.setMainStage(stage);
+        GenerateProfitReportsView.setMainStage(stage);
 
         PatientAppointmentsPageView.setMainStage(stage);
 
         PatientHistoryView.setMainStage(stage);
-
-        PatientLogin.setMainStage(stage);
-
-        ViewDiscountsView.setMainStage(stage);
-
-        ViewPricingView.setMainStage(stage);
 
         ViewTreatmentsView.setMainStage(stage);
 
@@ -65,9 +57,19 @@ public class MainApplication extends Application {
 
         AdminPageView.setMainStage(stage);
 
-        PatientPage.setMainStage(stage);
+        DoctorPage.setMainStage(stage);
 
+        DoctorLoginView.setMainStage(stage);
 
+        ViewAppointmentsView.setMainStage(stage);
+
+        ProductManagementView.setMainStage(stage);
+
+        GenerateProfitReportsView.setMainStage(stage);
+
+        ViewPricingHistory.setMainStage(stage);
+
+        ExpenditureView.setMainStage(stage);
     }
 
     public static void main(String[] args) {

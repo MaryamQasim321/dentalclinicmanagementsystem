@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.dentalclinicmanagementsystem.ViewTreatmentsView"
-            prefHeight="400.0" prefWidth="600.0"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
-    <Button  style="-fx-font-size: 20px;" onAction="#onClickBackButton" id="main_sale" mnemonicParsing="false"  text="back">
+<ScrollPane prefHeight="600.0" prefWidth="2000.0" style="-fx-background-color: #7393B3;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.ViewTreatmentsView">
+    <content>
+<AnchorPane prefHeight="1000.0" prefWidth="2000.0" style="-fx-background-color: #7393B3;" stylesheets="@main.css" >
 
+    <!-- Back Button -->
+    <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
         <graphic>
-            <ImageView fitHeight="25" fitWidth="25">
+            <ImageView fitHeight="20" fitWidth="20">
                 <image>
                     <Image url="@./assets/bacck3.png" />
                 </image>
@@ -23,4 +19,23 @@
         </graphic>
     </Button>
 
+    <!-- TableView for Treatments -->
+    <TableView fx:id="treatmentsTable" layoutX="20.0" layoutY="50.0" prefHeight="350.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-border-color: #30527a; -fx-border-width: 2px; -fx-border-radius: 10; -fx-background-radius: 10;">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="100.0" text="ID" style="-fx-alignment: CENTER; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+            <TableColumn fx:id="nameColumn" prefWidth="180.0" text="Name" style="-fx-alignment: CENTER; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="300.0" text="Description" style="-fx-alignment: CENTER; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #a3c6df; -fx-text-fill: white;" />
+            <TableColumn fx:id="costColumn" prefWidth="150.0" text="Cost" style="-fx-alignment: CENTER; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+            <TableColumn fx:id="actionColumn" prefWidth="230.0" text="Actions" style="-fx-alignment: CENTER; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #30527a; -fx-text-fill: white;" />
+        </columns>
+    </TableView>
+
+    <!-- Buttons for Actions -->
+    <Button fx:id="enterTreatmentButton" layoutX="400.0" layoutY="400.0" mnemonicParsing="false" text="Enter Treatments" style="-fx-font-size: 18px; -fx-background-color: #30527a; -fx-text-fill: white; -fx-border-radius: 10; -fx-background-radius: 10;" />
+
+    <!-- VBox for Dynamic Elements -->
+    <VBox fx:id="dynamicPane" layoutX="20.0" layoutY="430.0" spacing="10" prefWidth="960.0" />
+
 </AnchorPane>
+    </content>
+</ScrollPane>

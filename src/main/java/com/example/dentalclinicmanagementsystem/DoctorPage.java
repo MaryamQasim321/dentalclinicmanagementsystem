@@ -76,6 +76,15 @@ public class DoctorPage {
         mainStage.show();
     }
     @FXML
+    public void onClickBookAppointmentButton() throws IOException {
+        FXMLLoader fxmlLoader=new FXMLLoader(MainApplication.class.getResource("bookAppointment-view.fxml"));
+        Scene scene= new Scene(fxmlLoader.load(), 640, 500);
+        mainStage.setTitle("Dental Clinic Management System");
+        mainStage.setScene(scene);
+        mainStage.show();
+    }
+
+    @FXML
     public void onClickBackButton() throws IOException {
         FXMLLoader fxmlLoader=new FXMLLoader(MainApplication.class.getResource("mainScreen-view.fxml"));
         Scene scene= new Scene(fxmlLoader.load(), 640, 500);
@@ -84,39 +93,26 @@ public class DoctorPage {
         mainStage.show();
 
     }
-//
-//        @FXML
-//    public void onClickPatientHistoryButton() throws IOException {
-//            System.out.println("patient history");
-//
-//    }
-//        @FXML
-//    public void onClickEnterPatientDataButton() throws IOException {
-//            System.out.println("patient data");
-//
-//    }
-//        @FXML
-//    public void onClickViewAppointmentsButton() throws IOException {
-//            System.out.println("view appointments");
-//
-//    }
-//        @FXML
-//    public void onClickViewPricingButton() throws IOException {
-//            System.out.println("view pricing");
-//
-//    }
-//        @FXML
-//    public void onClickViewTreatmentsButton() throws IOException {
-//            System.out.println("view treatments");
-//
-//    }
-//        @FXML
-//    public void onClickGenerateReportsButton() throws IOException {
-//            System.out.println("generate reports");
-//    }
-//
-//    @FXML
-//    public void onClickEnterSalesAndPurchasesButton() throws IOException {
-//        System.out.println("calculate sales and purchases");
-//    }
+
+
+    @FXML
+    public void onClickBookProductManagementButton() throws IOException {
+        FXMLLoader fxmlLoader=new FXMLLoader(MainApplication.class.getResource("productManagementView.fxml"));
+        Scene scene= new Scene(fxmlLoader.load(), 640, 500);
+        mainStage.setTitle("Dental Clinic Management System");
+        mainStage.setScene(scene);
+        mainStage.show();
+    }
+
+
+    @FXML
+    public void onClickAddExpensesButton() throws IOException {
+        FXMLLoader fxmlLoader=new FXMLLoader(MainApplication.class.getResource("expenditure-view.fxml"));
+        Scene scene= new Scene(fxmlLoader.load(), 640, 500);
+        mainStage.setTitle("Dental Clinic Management System");
+        mainStage.setScene(scene);
+        mainStage.show();
+    }
+
+
 }

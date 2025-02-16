@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.dentalclinicmanagementsystem.ViewPricingView"
-            prefHeight="400.0" prefWidth="600.0"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
-    <Button  style="-fx-font-size: 20px;" onAction="#onClickBackButton" id="main_sale" mnemonicParsing="false"  text="back">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #7393B3;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.ViewPricingHistory">
 
+
+
+    <!-- Treatments Table -->
+    <TableView fx:id="treatmentsTable" layoutX="20.0" layoutY="50.0" prefHeight="200.0" prefWidth="760.0">
+        <columns>
+            <TableColumn fx:id="treatmentHistoryIdColumn" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="History ID" />
+            <TableColumn fx:id="treatmentProductIdColumn" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="Treatment ID" />
+            <TableColumn fx:id="treatmentNameColumn" prefWidth="200.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="Treatment Name" />
+            <TableColumn fx:id="treatmentOldPriceColumn" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="Old Price ($)" />
+            <TableColumn fx:id="treatmentNewPriceColumn" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="New Price ($)" />
+            <TableColumn fx:id="treatmentChangeDateColumn" prefWidth="160.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="Change Date" />
+        </columns>
+    </TableView>
+
+    <!-- Products Table -->
+    <TableView fx:id="productsTable" layoutX="20.0" layoutY="300.0" prefHeight="200.0" prefWidth="760.0">
+        <columns>
+            <TableColumn fx:id="productHistoryIdColumn" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="History ID" />
+            <TableColumn fx:id="productProductIdColumn" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="Product ID" />
+            <TableColumn fx:id="productNameColumn" prefWidth="200.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="Product Name" />
+            <TableColumn fx:id="productOldPriceColumn" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="Old Price ($)" />
+            <TableColumn fx:id="productNewPriceColumn" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="New Price ($)" />
+            <TableColumn fx:id="productChangeDateColumn" prefWidth="160.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" text="Change Date" />
+        </columns>
+    </TableView>
+
+    <!-- Back Button -->
+    <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
         <graphic>
-            <ImageView fitHeight="25" fitWidth="25">
+            <ImageView fitHeight="20" fitWidth="20">
                 <image>
                     <Image url="@./assets/bacck3.png" />
                 </image>
             </ImageView>
         </graphic>
     </Button>
-
+   <Label layoutX="202.0" layoutY="264.0" prefHeight="27.0" prefWidth="206.0" style="-fx-font-size: 18px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="   Products price history" />
+   <Label layoutX="167.0" layoutY="16.0" prefHeight="27.0" prefWidth="224.0" style="-fx-font-size: 18px; -fx-background-color: #30527a; -fx-text-fill: white; " text="    Treatments price history" />
 </AnchorPane>

@@ -1,32 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.dentalclinicmanagementsystem.EnterPatientDataView"
-            prefHeight="400.0" prefWidth="600.0"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #7393B3;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.EnterPatientDataView">
+    <children>
+        <!-- Back Button -->
+        <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
+            <graphic>
+                <ImageView fitHeight="20" fitWidth="20">
+                    <image>
+                        <Image url="@./assets/bacck3.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <!-- Title -->
+        <Label layoutX="400.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Patient Data Entry" textFill="WHITE" />
+
+        <!-- Input Fields -->
+        <AnchorPane layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="900.0">
+            <children>
+                <Label layoutX="20.0" layoutY="10.0" text="First Name" textFill="WHITE" />
+                <TextField fx:id="firstNameField" layoutX="20.0" layoutY="40.0" prefWidth="200.0" />
+
+                <Label layoutX="240.0" layoutY="10.0" text="Last Name" textFill="WHITE" />
+                <TextField fx:id="lastNameField" layoutX="240.0" layoutY="40.0" prefWidth="200.0" />
+
+                <Label layoutX="460.0" layoutY="10.0" text="Email" textFill="WHITE" />
+                <TextField fx:id="emailField" layoutX="460.0" layoutY="40.0" prefWidth="200.0" />
+
+                <Label layoutX="680.0" layoutY="10.0" text="Phone Number" textFill="WHITE" />
+                <TextField fx:id="phoneNumberField" layoutX="680.0" layoutY="40.0" prefWidth="200.0" />
+
+                <Label layoutX="20.0" layoutY="90.0" text="Address" textFill="WHITE" />
+                <TextField fx:id="addressField" layoutX="20.0" layoutY="120.0" prefWidth="400.0" />
+
+                <Label layoutX="460.0" layoutY="90.0" text="Date of Birth" textFill="WHITE" />
+                <DatePicker fx:id="dobPicker" layoutX="460.0" layoutY="120.0" prefWidth="200.0" />
+            </children>
+        </AnchorPane>
+
+        <!-- Medical and Dental History -->
+        <AnchorPane layoutX="53.0" layoutY="250.0" prefHeight="330.0" prefWidth="900.0">
+            <children>
+                <Label layoutX="20.0" layoutY="10.0" text="Medical History" textFill="WHITE" />
+                <ListView fx:id="medicalHistoryListView" layoutX="20.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" />
+
+                <Label layoutX="289.0" layoutY="10.0" text="Selected Medical History" textFill="WHITE" />
+                <ListView fx:id="selectedMedicalHistoriesListView" layoutX="297.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" />
+
+                <Button layoutX="229.0" layoutY="52.0" mnemonicParsing="false" onAction="#onAddMedicalHistory" style="-fx-background-color: #30527a; -fx-text-fill: white;" text="Add" />
+                <Button layoutX="229.0" layoutY="86.0" mnemonicParsing="false" onAction="#onRemoveMedicalHistory" style="-fx-background-color: #30527a; -fx-text-fill: white;" text="Remove" />
+
+                <Label layoutX="534.0" layoutY="10.0" text="Dental History" textFill="WHITE" />
+                <TextArea fx:id="dentalHistoryArea" layoutX="509.0" layoutY="33.0" prefHeight="200.0" prefWidth="250.0" />
+
+                <Label layoutX="768.0" layoutY="10.0" text="Medications" textFill="WHITE" />
+                <TextField fx:id="medicationsField" layoutX="768.0" layoutY="39.0" prefWidth="200.0" />
+
+                <Label layoutX="768.0" layoutY="90.0" text="Allergies" textFill="WHITE" />
+                <TextField fx:id="allergiesField" layoutX="768.0" layoutY="120.0" prefWidth="200.0" />
+
+                <Label layoutX="768.0" layoutY="173.0" text="Previous Treatments" textFill="WHITE" />
+                <TextField fx:id="previousTreatmentsField" layoutX="768.0" layoutY="196.0" prefWidth="200.0" />
 
 
-        <children>
-            <Button  prefWidth="200"  id="main_sale" mnemonicParsing="false" onAction="#onClickBackButton" style="-fx-font-size: 20px; -fx-background-color: #7393B3;" text="back">
+                <Label layoutX="534.0" layoutY="250.0" text="Visiting Date" textFill="WHITE" />
+                <DatePicker fx:id="visitingDatePicker" layoutX="534.0" layoutY="281.0" prefWidth="200.0" />
+            </children>
+        </AnchorPane>
 
-                <graphic>
-                    <ImageView fitHeight="25" fitWidth="25">
-                        <image>
-                            <Image url="@./assets/bacck3.png" />
-                        </image>
-                    </ImageView>
-                </graphic>
-            </Button>
-        </children>
-
-
-
+        <!-- Enter Button -->
+        <Button layoutX="820.0" layoutY="600.0" mnemonicParsing="false" onAction="#onClickEnterPatientDataButton" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white; -fx-border-radius: 10; -fx-background-radius: 10;" text="Enter" />
+    </children>
 </AnchorPane>

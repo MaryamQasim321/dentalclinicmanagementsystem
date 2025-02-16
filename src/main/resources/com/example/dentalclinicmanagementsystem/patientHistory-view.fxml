@@ -4,19 +4,45 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #002D62;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.PatientHistoryView">
-        <children>
-            <Button  prefWidth="200"  id="main_sale" mnemonicParsing="false" onAction="#onClickBackButton" style="-fx-font-size: 20px; -fx-background-color: #7393B3;" text="back">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #7393B3;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.PatientHistoryView">
+    <children>
+        <!-- Back Button -->
+        <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
+            <graphic>
+                <ImageView fitHeight="20" fitWidth="20">
+                    <image>
+                        <Image url="@./assets/bacck3.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
 
-                <graphic>
-                    <ImageView fitHeight="25" fitWidth="25">
-                        <image>
-                            <Image url="@./assets/bacck3.png" />
-                        </image>
-                    </ImageView>
-                </graphic>
-            </Button>
-        </children>
+        <!-- TextField for Patient ID Search -->
+        <TextField fx:id="patientNameSearchField" layoutX="200.0" layoutY="20.0" prefWidth="300.0" promptText="Enter Patient name" style="-fx-font-size: 16px;" />
 
 
-    <Label layoutX="54.0" layoutY="140.0" prefHeight="206.0" prefWidth="515.0" style="-fx-font-size: 24px;" styleClass="main-label" text="welcome to salam medical complex" textFill="white" /></AnchorPane>
+        <!-- Search Button -->
+        <Button layoutX="520.0" layoutY="20.0" mnemonicParsing="false" onAction="#onSearchButtonClick" style="-fx-font-size: 16px; -fx-background-color: #7393B3; -fx-text-fill: white; -fx-border-radius: 10; -fx-background-radius: 10;" text="Search" />
+        <Label layoutX="650.0" layoutY="30.0" text="CLick on any field of table to edit patient's history." style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;"></Label>
+
+        <!-- TableView for Patient History -->
+        <TableView fx:id="patientHistoryTable" layoutX="20.0" layoutY="80.0" prefHeight="500.0" prefWidth="1150.0" style="-fx-background-color: white; -fx-border-color: #30527a; -fx-border-width: 2px; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <columns>
+                <TableColumn fx:id="historyIdColumn" text="History ID" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="patientIdColumn" text="Patient ID" prefWidth="150.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="patientNameColumn" text="Patient Name" prefWidth="200.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="visitDateColumn" text="Visit Date" prefWidth="150.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="medicalHistoryColumn" text="Medical History" prefWidth="200.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="dentalHistoryColumn" text="Dental History" prefWidth="200.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="medicationsColumn" text="Medications" prefWidth="150.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="allergiesColumn" text="Allergies" prefWidth="150.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="previousTreatmentsColumn" text="Previous Treatments" prefWidth="250.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+            </columns>
+        </TableView>
+
+    </children>
+
+    <!-- Center the Table Dynamically -->
+    <AnchorPane.leftAnchor>20.0</AnchorPane.leftAnchor>
+    <AnchorPane.rightAnchor>20.0</AnchorPane.rightAnchor>
+</AnchorPane>

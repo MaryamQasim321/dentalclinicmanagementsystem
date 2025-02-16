@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.dentalclinicmanagementsystem.ProductManagementView"
+            prefHeight="600.0" prefWidth="1000.0"
+            style="-fx-background-color: #7393B3;">
+    <children>
+        <!-- Back Button -->
+        <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
+            <graphic>
+                <ImageView fitHeight="20" fitWidth="20">
+                    <image>
+                        <Image url="@./assets/bacck3.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <!-- Title -->
+        <Label layoutX="400.0" layoutY="20.0" text="Product Management" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" />
+
+        <!-- Add Product Form -->
+        <VBox layoutX="20.0" layoutY="80.0" spacing="15.0" prefWidth="450.0" style="-fx-background-color: white; -fx-padding: 20px; -fx-border-color: #30527a; -fx-border-width: 2px; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <Label text="Add or Update Product" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #30527a;" />
+            <HBox spacing="10.0">
+                <Label text="Product Name:" style="-fx-font-size: 14px;" />
+                <TextField fx:id="productNameField" promptText="Enter product name" style="-fx-font-size: 14px;" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Price per Unit:" style="-fx-font-size: 14px;" />
+                <TextField fx:id="productPriceField" promptText="Enter price per unit" style="-fx-font-size: 14px;" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Quantity Available:" style="-fx-font-size: 14px;" />
+                <TextField fx:id="productQuantityField" promptText="Enter quantity available" style="-fx-font-size: 14px;" />
+            </HBox>
+            <Button text="Add/Update Product" onAction="#onAddUpdateProductClick"
+                    style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" />
+        </VBox>
+
+        <!-- Product List Table -->
+        <TableView fx:id="productTableView" layoutX="500.0" layoutY="80.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-border-color: #30527a; -fx-border-width: 2px; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <columns>
+                <TableColumn fx:id="productNameColumn" text="Product Name" prefWidth="150.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="pricePerUnitColumn" text="Price per Unit" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+                <TableColumn fx:id="quantityAvailableColumn" text="Quantity Available" prefWidth="120.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #7393B3; -fx-text-fill: white;" />
+                <TableColumn fx:id="lastUpdatedColumn" text="Last Updated" prefWidth="200.0" style="-fx-alignment: CENTER; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #6b9dcf; -fx-text-fill: white;" />
+            </columns>
+        </TableView>
+
+        <!-- Low Stock Alert -->
+        <Label fx:id="lowStockLabel" layoutX="500.0" layoutY="500.0" text="Low stock alert for: None"
+               style="-fx-text-fill: red; -fx-font-size: 14px; -fx-font-weight: bold;" />
+
+        <!-- Price History Link -->
+       </children>
+</AnchorPane>

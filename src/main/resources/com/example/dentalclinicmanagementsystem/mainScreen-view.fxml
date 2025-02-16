@@ -1,21 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7393B3;" styleClass="anchorpane" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.MainController">
    <children>
-      <TextArea layoutX="53.0" layoutY="193.0" prefHeight="200.0" prefWidth="481.0" text="Salam medical complex&#10;Give us a chance to prove that we care">
-         <font>
-            <Font name="Book Antiqua Bold" size="22.0" />
-         </font></TextArea>
+
       <AnchorPane prefHeight="114.0" prefWidth="600.0">
          <children>
-            <Button id="login-button" layoutX="467.0" layoutY="54.0" mnemonicParsing="false" onAction="#onClickLoginButton" prefHeight="54.0" prefWidth="97.0" text="Log in" />
-            <Button layoutX="322.0" layoutY="66.0" mnemonicParsing="false" onAction="#onClickContactUsButton" text="Contact us" />
-            <Button layoutX="168.0" layoutY="70.0" mnemonicParsing="false" onAction="#onClickAboutUsButton" text="About us" />
-            <Button id="home-button" layoutX="32.0" layoutY="73.0" mnemonicParsing="false" onAction="#onClickHomeButton" text="Home" />
+            <Button layoutX="448.0" layoutY="113.0" mnemonicParsing="false" onAction="#onClickContactUsButton" prefHeight="61.0" prefWidth="138.0" text="Contact us" />
+            <Button layoutX="289.0" layoutY="114.0" mnemonicParsing="false" onAction="#onClickAboutUsButton" prefHeight="61.0" prefWidth="130.0" text="About us" />
+            <Button id="home-button" layoutX="121.0" layoutY="114.0" mnemonicParsing="false" onAction="#onClickHomeButton" prefHeight="61.0" prefWidth="138.0" text="Home" />
+            <Button id="login-button" layoutX="614.0" layoutY="114.0" mnemonicParsing="false" onAction="#onClickLoginButton" prefHeight="61.0" prefWidth="110.0" text="Log in" />
+
          </children></AnchorPane>
+      <Text text="Premium Dental Care"
+
+            layoutX="140.0" layoutY="270"
+            style=" -fx-font-size: 50px; -fx-font-weight: bold; -fx-fill: white; -fx-font-family: 'Garamond';" />
+
+      <Text text="Smile with Confidence, Live with Joy"
+            layoutX="140.0" layoutY="340"
+            style=" -fx-font-size: 50px; -fx-font-weight: bold; -fx-fill: white; -fx-font-family: 'Garamond';" />
+
+
+      <Label text=" 📍320 Lahore – Kasur Rd, Tipu Block Garden Town, Lahore, Punjab 54000"
+             layoutX="300.0" layoutY="400.0"
+             style="-fx-font-size: 16px; -fx-fill: white; -fx-font-style: italic;"
+             wrapText="true" textAlignment="CENTER" maxWidth="500"/>
+
    </children>
 </AnchorPane>

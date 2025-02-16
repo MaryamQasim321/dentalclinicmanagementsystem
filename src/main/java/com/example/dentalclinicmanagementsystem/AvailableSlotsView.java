@@ -15,7 +15,7 @@ public class AvailableSlotsView {
     }
     @FXML
     public void onClickBackButton() throws IOException {
-        FXMLLoader fxmlLoader=new FXMLLoader(MainApplication.class.getResource("mainScreen-view.fxml"));
+        FXMLLoader fxmlLoader=new FXMLLoader(MainApplication.class.getResource("DoctorPage-view.fxml"));
         Scene scene= new Scene(fxmlLoader.load(), 640, 500);
         mainStage.setTitle("Dental Clinic Management System");
         mainStage.setScene(scene);

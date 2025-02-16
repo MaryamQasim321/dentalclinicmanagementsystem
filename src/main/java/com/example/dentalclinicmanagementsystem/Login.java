@@ -15,15 +15,7 @@ public class Login {
         mainStage = stage;
     }
 
-    @FXML
-    public void onClickPatientLoginButton() throws IOException {
-        FXMLLoader fxmlLoader=new FXMLLoader(MainApplication.class.getResource("PatientPage-view.fxml"));
-        Scene scene= new Scene(fxmlLoader.load(), 640, 500);
-        mainStage.setTitle("Dental Clinic Management System");
-        mainStage.setScene(scene);
-        mainStage.show();
 
-    }
     @FXML
     public void onClickDoctorLoginButton() throws IOException {
         FXMLLoader fxmlLoader=new FXMLLoader(MainApplication.class.getResource("doctorLogin-view.fxml"));

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.AboutUs"  stylesheets="@main.css" style="-fx-background-color: #002D62;">
-   <Button  style="-fx-font-size: 20px;" onAction="#onClickBackButton" id="main_sale" mnemonicParsing="false"  text="back">
-
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7393B3;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.AboutUs">
+   <!-- Back Button -->
+   <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
       <graphic>
-         <ImageView fitHeight="25" fitWidth="25">
+         <ImageView fitHeight="20" fitWidth="20">
             <image>
                <Image url="@./assets/bacck3.png" />
             </image>
@@ -18,6 +18,41 @@
       </graphic>
    </Button>
    <children>
-      <TextArea layoutX="50.0" layoutY="14.0" prefHeight="364.0" prefWidth="382.0" text="About us:&#10;&#10;&#10;" />
+      <Text text="Premium Dental Care"
+
+            layoutX="140.0" layoutY="100"
+            style=" -fx-font-size: 50px; -fx-font-weight: bold; -fx-fill: white; -fx-font-family: 'Garamond';" />
+
+      <Text text="Smile with Confidence, Live with Joy"
+            layoutX="140.0" layoutY="170"
+            style=" -fx-font-size: 50px; -fx-font-weight: bold; -fx-fill: white; -fx-font-family: 'Garamond';" />
+
+
+      <Label text=" 📍320 Lahore – Kasur Rd, Tipu Block Garden Town, Lahore, Punjab 54000"
+             layoutX="300.0" layoutY="500.0"
+             style="-fx-font-size: 16px; -fx-fill: white; -fx-font-style: italic;"
+             wrapText="true" textAlignment="CENTER" maxWidth="500"/>
+
+
+      <TextFlow layoutX="140.0" layoutY="220" prefWidth="600">
+         <Text text="At premium dental care, our dedicated team delivers personalized dental services"
+               style="-fx-font-size: 25px; -fx-fill: white; -fx-font-family: 'Garamond';"/>
+         <Text text="to ensure optimal oral health and radiant smiles. Our state-of-the-art facility"
+               style="-fx-font-size: 25px; -fx-fill: white; -fx-font-family: 'Garamond';"/>
+         <Text text="utilizes cutting-edge technology to provide:"
+               style="-fx-font-size: 25px; -fx-fill: white; -fx-font-family: 'Garamond';"/>
+
+         <Text text="- Dental care(cleanings, exams, X-rays)"
+               style="-fx-font-size: 25px; -fx-fill: white; -fx-font-family: 'Garamond';"/>
+         <Text text="- Restorative dentistry (fillings, crowns, implants)"
+               style="-fx-font-size: 25px; -fx-fill: white; -fx-font-family: 'Garamond';"/>
+         <Text text="- Cosmetic services (whitening, veneers, orthodontics)"
+               style="-fx-font-size: 25px; -fx-fill: white; -fx-font-family: 'Garamond';"/>
+         <Text text="- Surgical care (periodontics, oral surgery)"
+               style="-fx-font-size: 25px; -fx-fill: white; -fx-font-family: 'Garamond';"/>
+      </TextFlow>
+
+
+
    </children>
 </AnchorPane>

@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane style="-fx-background-color: #7393B3;"  stylesheets="@main.css" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.AdminPageView">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7393B3;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dentalclinicmanagementsystem.AdminPageView">
 
    <children>
       <AnchorPane layoutX="-8.0" prefHeight="412.0" prefWidth="756.0">
-         <Button  style="-fx-font-size: 20px;" onAction="#onClickBackButton" id="main_sale" mnemonicParsing="false"  text="back">
-
+         <!-- Back Button -->
+         <Button fx:id="backButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#onClickBackButton" prefWidth="100" style="-fx-font-size: 16px; -fx-background-color: #30527a; -fx-text-fill: white;  " text="Back">
             <graphic>
-               <ImageView fitHeight="25" fitWidth="25">
+               <ImageView fitHeight="20" fitWidth="20">
                   <image>
                      <Image url="@./assets/bacck3.png" />
                   </image>
                </ImageView>
             </graphic>
          </Button>
+         <Button onAction="#onEnterData" layoutX="326.0" layoutY="365.0" mnemonicParsing="false" text="Enter data" />
 
          <children>
             <Label layoutX="209.0" layoutY="38.0" prefHeight="35.0" prefWidth="187.0" text="Doctor  information page" />
@@ -29,13 +28,13 @@
             <Label layoutX="106.0" layoutY="224.0" text="phone number" />
             <Label layoutX="106.0" layoutY="268.0" text="email" />
             <Label layoutX="106.0" layoutY="314.0" text="hire date" />
-            <TextField layoutX="67.0" layoutY="110.0" />
-            <TextField layoutX="67.0" layoutY="161.0" />
-            <TextField layoutX="60.0" layoutY="201.0" />
-            <TextField layoutX="60.0" layoutY="241.0" />
-            <TextField layoutX="67.0" layoutY="285.0" />
-            <TextField layoutX="56.0" layoutY="331.0" />
-            <TextField layoutX="56.0" layoutY="373.0" />
+            <TextField fx:id="firstNameField" layoutX="67.0" layoutY="110.0" />
+            <TextField fx:id="lastNameField" layoutX="67.0" layoutY="161.0" />
+            <TextField fx:id="roleField" layoutX="60.0" layoutY="201.0" />
+            <TextField fx:id="phoneNumberField" layoutX="60.0" layoutY="241.0" />
+            <TextField fx:id="emailField" layoutX="67.0" layoutY="285.0" />
+            <TextField fx:id="hireDateField" layoutX="56.0" layoutY="331.0" />
+            <TextField fx:id="passwordField" layoutX="56.0" layoutY="373.0" />
             <Label layoutX="106.0" layoutY="356.0" text="password" />
          </children>
       </AnchorPane>
